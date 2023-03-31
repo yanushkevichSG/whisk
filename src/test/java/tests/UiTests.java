@@ -12,6 +12,7 @@ import utilities.Fake;
 public class UiTests extends BaseTest {
     private final User defaultUser = User.defaultUser();
     private final String shoppingListName = Fake.shoppingList();
+    private final String secondShoppingListName = Fake.shoppingList();
     private final MainPage mainPage = new MainPage();
     private final ShoppingListPage shoppingListPage = new ShoppingListPage();
 
@@ -57,10 +58,11 @@ public class UiTests extends BaseTest {
 
     @Test(priority = 7)
     public void testDeleteShoppingListAndDelete() {
-        shoppingListPage.clickOnThreeDotsForShoppingList(shoppingListName);
+        createShoppingList(secondShoppingListName);
+        shoppingListPage.clickOnThreeDotsForShoppingList(secondShoppingListName);
         shoppingListPage.clickOnDeleteList();
         shoppingListPage.getDeleteListForm().confirmDelete();
-        shoppingListPage.isShoppingListNotDisplayed(shoppingListName);
+        shoppingListPage.isShoppingListNotDisplayed(secondShoppingListName);
     }
 
     private void createShoppingList(String shoppingListName) {
