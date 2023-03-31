@@ -1,0 +1,13 @@
+*.class
+*.iml
+*.lst
+.idea
+.allure
+.allure-results
+target
+build
+test-output
+output
+# Log file
+*.log
+allure-results
