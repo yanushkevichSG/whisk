@@ -1,0 +1,6 @@
+{
+  "createShoppingList": {
+    "name": "string",
+    "primary": false
+  }
+}

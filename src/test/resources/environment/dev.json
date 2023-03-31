@@ -1,0 +1,11 @@
+{
+  "baseUrl": "https://my.whisk-dev.com/",
+  "apiService": {
+    "url": "https://api.whisk-dev.com/",
+    "bearerToken": "51I5qqf1apkCjru38d2ufZitz49kd9dP7dxqE6sEkJzNdIg32u2Zt5PVR7fDHeox"
+  },
+  "user": {
+    "email": "testwhiskuser@gmail.com",
+    "password": "!Password123!"
+  }
+}
