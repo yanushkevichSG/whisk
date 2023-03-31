@@ -61,6 +61,7 @@ public class UiTests extends BaseTest {
         createShoppingList(secondShoppingListName);
         shoppingListPage.clickOnThreeDotsForShoppingList(secondShoppingListName);
         shoppingListPage.clickOnDeleteList();
+        shoppingListPage.getDeleteListForm().isFormDisplayed();
         shoppingListPage.getDeleteListForm().confirmDelete();
         shoppingListPage.isShoppingListNotDisplayed(secondShoppingListName);
     }
