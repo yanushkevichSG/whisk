@@ -8,6 +8,7 @@ import org.openqa.selenium.Keys;
 import pages.forms.shoppingForms.CreateNewListForm;
 import pages.forms.shoppingForms.DeleteListForm;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -58,7 +59,7 @@ public class ShoppingListPage extends BasePage {
     public void isIteamAdded(String itemName) {
         shoppingListAddedItems.stream().filter(item -> itemName.equals(item.getText()))
                 .findAny()
-                .orElse(null).shouldHave(Condition.text(itemName));
+                .orElse(null).shouldHave(Condition.text(itemName), Duration.ofMillis(2000));
     }
 
     public CreateNewListForm getCreateNewListForm() {

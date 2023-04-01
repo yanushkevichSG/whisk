@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import pages.MainPage;
 import pages.ShoppingListPage;
 import steps.login.LogInSteps;
+import utilities.DataProvider;
 import utilities.Fake;
 
 public class UiTests extends BaseTest {
@@ -31,32 +32,12 @@ public class UiTests extends BaseTest {
         shoppingListPage.searchAndSelectItem(Items.CHEESE);
     }
 
-    @Test(priority = 2)
-    public void testCheckFirstItem() {
-        shoppingListPage.isIteamAdded(Items.MILK);
+    @Test(priority = 2, dataProvider = "allItems", dataProviderClass = DataProvider.class)
+    public void testCheckAllAddedItems(String item) {
+        shoppingListPage.isIteamAdded(item);
     }
 
     @Test(priority = 3)
-    public void testCheckSecondItem() {
-        shoppingListPage.isIteamAdded(Items.EGGS);
-    }
-
-    @Test(priority = 4)
-    public void testCheckThirdItem() {
-        shoppingListPage.isIteamAdded(Items.BREAD);
-    }
-
-    @Test(priority = 5)
-    public void testCheckFourthItem() {
-        shoppingListPage.isIteamAdded(Items.BUTTER);
-    }
-
-    @Test(priority = 6)
-    public void testCheckFifthItem() {
-        shoppingListPage.isIteamAdded(Items.CHEESE);
-    }
-
-    @Test(priority = 7)
     public void testCreateShoppingListAndDelete() {
         createShoppingList(secondShoppingListName);
         shoppingListPage.clickOnThreeDotsForShoppingList(secondShoppingListName);
