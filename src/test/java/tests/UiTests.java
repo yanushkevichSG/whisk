@@ -57,7 +57,7 @@ public class UiTests extends BaseTest {
     }
 
     @Test(priority = 7)
-    public void testDeleteShoppingListAndDelete() {
+    public void testCreateShoppingListAndDelete() {
         createShoppingList(secondShoppingListName);
         shoppingListPage.clickOnThreeDotsForShoppingList(secondShoppingListName);
         shoppingListPage.clickOnDeleteList();

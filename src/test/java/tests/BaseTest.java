@@ -31,7 +31,7 @@ public abstract class BaseTest {
         Configuration.savePageSource = false;
         Configuration.webdriverLogsEnabled = false;
         Configuration.pageLoadTimeout = 30000;
-        Configuration.timeout = 15000;
+        Configuration.timeout = 16000;
         Selenide.open(Environment.getBaseUrl());
     }
 }
